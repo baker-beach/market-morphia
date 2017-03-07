@@ -26,15 +26,6 @@ public class DatastoreFactory2 extends AbstractFactoryBean<Datastore>  {
 		return morphia.createDatastore(mongoClient, dbName);
 	}
 	
-	@Deprecated
-	public Datastore newInstance() {
-		for (String packageName : packages.split(",")) {
-			morphia.mapPackage(packageName);
-		}
-		morphia.getMapper().getConverters().addConverter(BigDecimalConverter.class);
-		return morphia.createDatastore(mongoClient, dbName);
-	}
-	
 	public void setMorphia(Morphia morphia) {
 		this.morphia = morphia;
 	}
