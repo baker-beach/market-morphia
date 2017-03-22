@@ -26,6 +26,9 @@ public class DatastoreFactory2 extends AbstractFactoryBean<Datastore> {
 		if (!morphia.getMapper().getConverters().isRegistered(BigDecimalConverter.class)) {
 			morphia.getMapper().getConverters().addConverter(BigDecimalConverter.class);
 		}
+		if (!morphia.getMapper().getConverters().isRegistered(CurrencyConverter.class)) {
+			morphia.getMapper().getConverters().addConverter(CurrencyConverter.class);
+		}
 
 		return morphia.createDatastore(mongoClient, dbName);
 	}

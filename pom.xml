@@ -11,7 +11,7 @@
 	<artifactId>market-morphia</artifactId>
 	<name>market-morphia</name>
 	<packaging>jar</packaging>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.mongodb.morphia</groupId>
