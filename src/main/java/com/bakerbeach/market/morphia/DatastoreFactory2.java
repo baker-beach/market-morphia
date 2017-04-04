@@ -7,10 +7,10 @@ import org.springframework.beans.factory.config.AbstractFactoryBean;
 import com.mongodb.MongoClient;
 
 public class DatastoreFactory2 extends AbstractFactoryBean<Datastore> {
-	private Morphia morphia;
-	private MongoClient mongoClient;
-	private String dbName;
-	private String packages = "";
+	protected Morphia morphia;
+	protected MongoClient mongoClient;
+	protected String dbName;
+	protected String packages = "";
 
 	@Override
 	public Class<?> getObjectType() {
